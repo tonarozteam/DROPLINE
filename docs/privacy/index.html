@@ -15,6 +15,9 @@ header{padding:8px 0 24px;border-bottom:1px solid var(--line);margin-bottom:26px
 .brand{font-size:1rem;font-weight:800;letter-spacing:.12em;margin:0 0 18px}
 h1{font-size:clamp(2rem,6vw,2.7rem);line-height:1.15;margin:0 0 8px;font-weight:750}
 .updated{font-size:.9rem;color:var(--muted);margin:0}
+nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+nav a{display:inline-block;text-decoration:none;border:1.8px solid #aaa797;border-radius:999px;padding:7px 12px;background:#fffefa;color:var(--ink);box-shadow:0 3px 0 #ded7c9;font-weight:600}
+@media(max-width:600px){nav a{font-size:.82rem;padding:6px 10px}}
 section{padding:18px 0;border-bottom:1px solid var(--line)}
 h2{font-size:1.12rem;line-height:1.4;margin:0 0 9px;font-weight:700}
 p,li{color:#52615d}
@@ -32,6 +35,14 @@ footer{padding-top:24px;color:var(--muted);font-size:.88rem}
 <p class="brand">DROPLINE</p>
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: 19 November 2026</p>
+<nav aria-label="Main navigation">
+<a href="/DROPLINE/">Home</a>
+<a href="/DROPLINE/about/">About</a>
+<a href="/DROPLINE/support/">Support</a>
+<a href="/DROPLINE/terms/">Terms of Use</a>
+<a href="/DROPLINE/docs/privacy/">Privacy Policy</a>
+<a href="/DROPLINE/privacy-choices/">Privacy Choices</a>
+</nav>
 </header>
 
 <section id="who-we-are">
