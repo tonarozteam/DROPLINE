@@ -9,7 +9,7 @@ DROPLINE challenges players to rotate and connect pipe segments across a progres
 - **Developer:** Tonaroz Team
 - **Support:** [Tunarozteam@gmail.com](mailto:Tunarozteam@gmail.com)
 - **Repository:** https://github.com/tonarozteam/DROPLINE
-- **Privacy policy:** https://tonarozteam.github.io/DROPLINE/
+- **Privacy policy:** https://tonarozteam.github.io/DROPLINE/docs/privacy/
 
 ## Worlds
 
@@ -31,7 +31,7 @@ The repository currently contains project documentation and the public privacy p
 
 ## Privacy and advertising
 
-The game is intended to use Google AdMob for advertising and Google User Messaging Platform (UMP) for consent management. The exact data practices depend on the SDK versions, configuration, enabled ad features, and applicable regional consent requirements. See the [Privacy Policy](https://tonarozteam.github.io/DROPLINE/).
+The game is intended to use Google AdMob for advertising and Google User Messaging Platform (UMP) for consent management. The exact data practices depend on the SDK versions, configuration, enabled ad features, and applicable regional consent requirements. See the [Privacy Policy](https://tonarozteam.github.io/DROPLINE/docs/privacy/).
 
 ## Contact
 
