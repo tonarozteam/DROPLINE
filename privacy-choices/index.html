@@ -7,7 +7,7 @@
 <meta name="description" content="DROPLINE — Information about advertising consent and privacy controls in DROPLINE.">
 <title>DROPLINE — Privacy Choices</title>
 <style>
-:root{color-scheme:light;--bg:#fff4e7;--paper:#fffefa;--ink:#193b3d;--muted:#66716d;--line:#d9d2c6;--teal:#239d96;--shadow:0 4px 0 #ded7c9}
+:root{color-scheme:light;--bg:#fff4e7;--paper:#fffefa;--ink:#193b3d;--muted:#66716d;--line:#d9d2c6;--teal:#239d96}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
 main{max-width:760px;margin:0 auto;padding:30px 22px 56px}
 header{padding:12px 0 23px;border-bottom:1px solid var(--line);margin-bottom:24px}
@@ -16,11 +16,11 @@ nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
 nav a{display:inline-block;text-decoration:none;border:1.8px solid #aaa797;border-radius:999px;padding:8px 15px;background:var(--paper);color:var(--ink);box-shadow:0 3px 0 #ded7c9;font-weight:600}
 nav a[aria-current=page]{background:#61d1c8;border-color:#499e98}
 h1{font-size:clamp(2rem,6vw,2.7rem);line-height:1.15;margin:0 0 8px;font-weight:750}
-h2{font-size:1.12rem;margin:0 0 8px}
-.lead{font-size:1.08rem;color:#52615d;max-width:650px}
+h2{font-size:1.12rem;margin:0 0 8px}.lead{font-size:1.08rem;color:#52615d;max-width:650px}
 section{padding:18px 0;border-bottom:1px solid var(--line)}
 p,li{color:#52615d}p{margin:8px 0}ul{padding-left:22px}
 a{color:var(--teal);text-underline-offset:3px}a:hover{color:#176f6a}
+.arabic{direction:rtl;text-align:right;margin-top:38px}.arabic ul{padding-right:22px;padding-left:0}
 footer{padding-top:24px;color:var(--muted);font-size:.88rem}
 @media(max-width:560px){main{padding:24px 18px 42px}nav a{font-size:.85rem;padding:7px 11px}}
 </style>
@@ -29,19 +29,22 @@ footer{padding-top:24px;color:var(--muted);font-size:.88rem}
 <header>
 <p class="brand">DROPLINE</p>
 <h1>Privacy Choices</h1>
-<p class="lead">Information about consent and privacy controls available in DROPLINE.</p>
+<p class="lead">How to review and manage advertising consent choices in DROPLINE.</p>
 <nav aria-label="Main navigation">
-<a href="/DROPLINE/">Home</a>
-<a href="/DROPLINE/about/">About</a>
-<a href="/DROPLINE/support/">Support</a>
-<a href="/DROPLINE/terms/">Terms of Use</a>
-<a href="/DROPLINE/docs/privacy/">Privacy Policy</a>
-<a href="/DROPLINE/privacy-choices/">Privacy Choices</a>
+<a href="/DROPLINE/">Home</a><a href="/DROPLINE/about/">About</a><a href="/DROPLINE/support/">Support</a><a href="/DROPLINE/terms/">Terms of Use</a><a href="/DROPLINE/docs/privacy/">Privacy Policy</a><a href="/DROPLINE/privacy-choices/" aria-current="page">Privacy Choices</a>
 </nav>
 </header>
-<section><h2>Current app availability</h2><p>The current version of DROPLINE may not include an active advertising network or an in-app privacy choices control. If the app displays a message that privacy choices are not available, it means there are no advertising consent choices to manage in that version.</p></section>
-<section><h2>When advertising is enabled</h2><p>If advertising is introduced in a future version, DROPLINE may use Google AdMob and Google's User Messaging Platform (UMP), depending on the release configuration and regional requirements. Where applicable, a consent message will explain the relevant choices before advertising-related processing takes place.</p></section>
-<section><h2>Changing your choices</h2><p>If a privacy options entry is available in the game settings, use it to review or change the choices offered for your region. The available options depend on the applicable requirements and the consent tools enabled in that version of the app.</p><p>Google's information: <a href="https://developers.google.com/admob/unity/privacy" target="_blank" rel="noopener noreferrer">Google UMP privacy and consent documentation</a>.</p></section>
-<section><h2>Contact</h2><p>For questions about privacy choices in DROPLINE, contact <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a>. For more information about data handling, read the <a href="/DROPLINE/docs/privacy/">Privacy Policy</a>.</p></section>
+<section><h2>Advertising and consent</h2><p>DROPLINE integrates Google AdMob for in-game advertising and Google's User Messaging Platform (UMP) to support consent messages and privacy choices. Whether a consent message is displayed depends on your region, applicable requirements and your existing consent state.</p></section>
+<section><h2>Review or change your choices</h2><p>Open <strong>Settings → Privacy Choices</strong> in the game to review or change the options available for your region. If no form is displayed, there may be no additional choice to present for your current region or consent state. Your choices are handled through the consent tools provided by Google UMP.</p></section>
+<section><h2>Advertising when consent is not available</h2><p>The game checks the consent state before requesting ads. If ads cannot be requested under the applicable consent requirements or because the service is unavailable, the game should remain playable without requiring you to watch an ad.</p></section>
+<section><h2>More information</h2><p>Read the <a href="/DROPLINE/docs/privacy/">DROPLINE Privacy Policy</a> for details about advertising, information processed by third-party providers, storage and privacy rights.</p><p>Google information: <a href="https://developers.google.com/admob/unity/privacy" target="_blank" rel="noopener noreferrer">Google UMP privacy and consent documentation</a>.</p></section>
+<section><h2>Contact</h2><p>For questions about privacy choices in DROPLINE, contact <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a>.</p></section>
+<div class="arabic" lang="ar" dir="rtl">
+<section><h2>الإعلانات والموافقة</h2><p>تدمج DROPLINE خدمة Google AdMob لعرض الإعلانات داخل اللعبة، ومنصة Google User Messaging Platform (UMP) لدعم رسائل الموافقة وخيارات الخصوصية. ويعتمد ظهور رسالة الموافقة على منطقتك والمتطلبات المعمول بها وحالة الموافقة السابقة.</p></section>
+<section><h2>مراجعة اختياراتك أو تغييرها</h2><p>افتح <strong>الإعدادات ← خيارات الخصوصية</strong> داخل اللعبة لمراجعة الخيارات المتاحة لمنطقتك أو تغييرها. إذا لم يظهر نموذج، فقد لا توجد خيارات إضافية لعرضها وفق منطقتك أو حالة الموافقة الحالية. تتم إدارة اختياراتك من خلال أدوات الموافقة التي توفرها Google UMP.</p></section>
+<section><h2>الإعلانات عند عدم توفر الموافقة</h2><p>تتحقق اللعبة من حالة الموافقة قبل طلب الإعلانات. إذا تعذّر طلب الإعلانات بسبب متطلبات الموافقة المعمول بها أو عدم توفر الخدمة، فينبغي أن تظل اللعبة قابلة للعب دون إلزامك بمشاهدة إعلان.</p></section>
+<section><h2>معلومات إضافية</h2><p>راجع <a href="/DROPLINE/docs/privacy/">سياسة خصوصية DROPLINE</a> لمعرفة تفاصيل الإعلانات والمعلومات التي تعالجها الجهات الخارجية والتخزين وحقوق الخصوصية.</p><p>معلومات Google: <a href="https://developers.google.com/admob/unity/privacy" target="_blank" rel="noopener noreferrer">توثيق Google UMP للخصوصية والموافقة</a>.</p></section>
+<section><h2>التواصل</h2><p>للاستفسارات حول خيارات الخصوصية في DROPLINE، تواصل عبر <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a>.</p></section>
+</div>
 <footer>© 2026 Tonaroz Team · DROPLINE</footer>
 </main></body></html>
