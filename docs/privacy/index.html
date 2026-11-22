@@ -15,16 +15,16 @@ header{padding:8px 0 24px;border-bottom:1px solid var(--line);margin-bottom:26px
 .brand{font-size:1rem;font-weight:800;letter-spacing:.12em;margin:0 0 18px}
 h1{font-size:clamp(2rem,6vw,2.7rem);line-height:1.15;margin:0 0 8px;font-weight:750}
 .updated{font-size:.9rem;color:var(--muted);margin:0}
-nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
-nav a{display:inline-block;text-decoration:none;border:1.8px solid #aaa797;border-radius:999px;padding:7px 12px;background:#fffefa;color:var(--ink);box-shadow:0 3px 0 #ded7c9;font-weight:600}
-@media(max-width:600px){nav a{font-size:.82rem;padding:6px 10px}}
+nav,.language{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+nav a,.language a{display:inline-block;text-decoration:none;border:1.8px solid #aaa797;border-radius:999px;padding:7px 12px;background:#fffefa;color:var(--ink);box-shadow:0 3px 0 #ded7c9;font-weight:600}
+@media(max-width:600px){nav a,.language a{font-size:.82rem;padding:6px 10px}}
 section{padding:18px 0;border-bottom:1px solid var(--line)}
 h2{font-size:1.12rem;line-height:1.4;margin:0 0 9px;font-weight:700}
-p,li{color:#52615d}
-p{margin:8px 0}
-ul{padding-left:22px}
-a{color:var(--teal);text-underline-offset:3px}
-a:hover{color:#176f6a}
+p,li{color:#52615d}p{margin:8px 0}ul{padding-left:22px}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#176f6a}
+.arabic{margin-top:42px;direction:rtl;text-align:right}
+.arabic ul{padding-right:22px;padding-left:0}
+.arabic nav{direction:rtl}
 footer{padding-top:24px;color:var(--muted);font-size:.88rem}
 @media(max-width:600px){main{padding:26px 18px 42px}header{padding-bottom:20px}section{padding:16px 0}h2{font-size:1.05rem}}
 </style>
@@ -34,74 +34,114 @@ footer{padding-top:24px;color:var(--muted);font-size:.88rem}
 <header>
 <p class="brand">DROPLINE</p>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 19 November 2026</p>
+<p class="updated">Last updated: 22 November 2026</p>
 <nav aria-label="Main navigation">
-<a href="/DROPLINE/">Home</a>
-<a href="/DROPLINE/about/">About</a>
-<a href="/DROPLINE/support/">Support</a>
-<a href="/DROPLINE/terms/">Terms of Use</a>
-<a href="/DROPLINE/docs/privacy/">Privacy Policy</a>
-<a href="/DROPLINE/privacy-choices/">Privacy Choices</a>
+<a href="/DROPLINE/">Home</a><a href="/DROPLINE/about/">About</a><a href="/DROPLINE/support/">Support</a><a href="/DROPLINE/terms/">Terms of Use</a><a href="/DROPLINE/docs/privacy/">Privacy Policy</a><a href="/DROPLINE/privacy-choices/">Privacy Choices</a>
 </nav>
+<div class="language" aria-label="Language">
+<a href="#english">English</a><a href="#arabic" lang="ar" dir="rtl">العربية</a>
+</div>
 </header>
 
+<div id="english">
 <section id="who-we-are">
 <h2>1. Who We Are</h2>
-<p>DROPLINE is a portrait mobile pipe-connection puzzle game published by Tonaroz Team. This policy explains how information may be handled when you use the game and related services. Actual practices depend on the features and third-party software included in the version you install.</p>
+<p>DROPLINE is a portrait mobile pipe-connection puzzle game published by Tonaroz Team. This policy explains how information is handled when you use the game and related services.</p>
 <p><strong>Developer:</strong> Tonaroz Team<br><strong>Privacy and support:</strong> <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a></p>
 </section>
-
 <section id="game-data">
 <h2>2. Game Information and Device Data</h2>
 <p>The game includes levels, daily puzzles, player progress, coins, hints, settings and cosmetic selections. Gameplay values and preferences may be stored locally on your device so the game can operate and remember your progress.</p>
-<p>Data processed by a particular release may also depend on analytics, crash-reporting, cloud-save, account, purchase or other software components enabled in that release. The data practices may therefore differ between versions.</p>
+<p>When the game connects to third-party services, those services may receive technical information needed to provide, secure and improve their services. The exact information depends on the service, SDK version, device settings and configuration.</p>
 </section>
-
 <section id="advertising">
-<h2>3. Advertising and Third-Party Providers</h2>
-<p>Tonaroz Team's project documentation identifies Google AdMob as the intended advertising service. Whether AdMob or mediation partners are active depends on the released build and its configuration. If the Google Mobile Ads SDK is included, Google may collect and process information as described in its SDK disclosures. Depending on the SDK version, features and configuration, this may include IP address, app interactions, diagnostics, device or advertising identifiers, and information used for advertising, analytics, security or fraud prevention.</p>
+<h2>3. Advertising and Google AdMob</h2>
+<p>The DROPLINE Android application integrates the Google Mobile Ads SDK (AdMob). The current game implementation includes optional rewarded ads, which offer in-game coins or hints after the required ad-completion event, and interstitial ads at selected level transitions. The current implementation does not include banner or app-open ads.</p>
+<p>When an ad is requested or shown, Google and its advertising partners may process information such as IP address, advertising or device identifiers (where available and permitted), app interactions, ad interactions, diagnostics, and information used for security, fraud prevention, measurement and advertising. The data collected in a particular session depends on Google's SDK behavior, your device settings, consent status, regional requirements and the configuration of the released app.</p>
 <p>Google resources: <a href="https://developers.google.com/admob/unity/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Google Mobile Ads SDK data disclosure for Unity</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-<p>If mediation or other third-party SDKs are enabled, those providers may process information under their own terms and privacy notices.</p>
 </section>
-
 <section id="consent">
 <h2>4. Consent and Privacy Controls</h2>
-<p>The project documentation identifies Google User Messaging Platform (UMP) as the intended consent-management solution. The exact implementation and available controls depend on the production build. Where UMP is used, it should be configured to display messages required for the user's region and determine whether an ad request is permitted.</p>
-<p>Where consent is required by applicable law, it must be obtained before the relevant processing or ad request. Your choices should be respected. A privacy-options entry point should be provided in the app when required by the SDK, platform policy or applicable law.</p>
+<p>DROPLINE integrates Google's User Messaging Platform (UMP) to support privacy and consent messages. Depending on your location and applicable requirements, UMP may display a consent message before ad requests are allowed. The game checks the consent state before requesting ads.</p>
+<p>You can open <strong>Privacy Choices</strong> in the game's Settings to review or change the choices made available for your region. Some regions or consent states may not require a form to be shown. Changing a choice may affect whether ads can be requested.</p>
 <p>Learn more: <a href="https://developers.google.com/admob/unity/privacy" target="_blank" rel="noopener noreferrer">UMP for Unity — Google developer documentation</a>.</p>
 </section>
-
 <section id="storage">
 <h2>5. Storage, Retention and Deletion</h2>
-<p>Gameplay progress and settings stored only on your device generally remain there until you clear the app's data, reset the game or uninstall it, subject to the operating system and the app's implementation. Uninstalling the app does not necessarily delete information already processed by an advertising or other third-party provider.</p>
-<p>Retention of information handled by Google or other providers is governed by their policies and applicable service settings. If the game uses accounts, cloud saves or server-side records, additional retention and deletion arrangements may apply.</p>
-<p>For a privacy request to Tonaroz Team, email <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a> with “DROPLINE Privacy Request” in the subject. Do not send passwords or payment-card details.</p>
+<p>Gameplay progress and settings stored locally generally remain on your device until you clear the app's data, reset the game or uninstall it, subject to Android and the app's implementation. Uninstalling the game does not necessarily delete information already processed by Google or another third-party provider.</p>
+<p>Google and other providers determine retention for information they process under their own policies and service settings. For a privacy request to Tonaroz Team, email <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a> with “DROPLINE Privacy Request” in the subject. Do not send passwords or payment-card details.</p>
 </section>
-
 <section id="security">
 <h2>6. Data Security</h2>
-<p>Tonaroz Team aims to use reasonable safeguards appropriate to the information and services actually operated. Information transmitted over networks should be protected using appropriate transport security. No method of storage or transmission is completely secure.</p>
+<p>Tonaroz Team aims to use reasonable safeguards appropriate to the information and services operated. Information transmitted over networks should be protected using appropriate transport security. No method of storage or transmission is completely secure.</p>
 </section>
-
 <section id="children">
-<h2>7. Children's Privacy</h2>
-<p>The target age groups for DROPLINE must be set accurately in Google Play Console. This policy does not by itself designate the game as child-directed or suitable for every age group.</p>
-<p>If children or users of unknown age may receive ads, the app and its advertising setup must follow applicable Google Play Families requirements. These can include using eligible ad SDK versions, age-appropriate ad content and formats, and restrictions on personalized advertising and identifiers. The actual target audience and ad configuration must be reviewed before release.</p>
+<h2>7. Children's Privacy and Age Groups</h2>
+<p>The target age groups for DROPLINE are determined by the audience and content declarations published for the app in Google Play. This policy does not independently assign an age rating or state that the game is directed to children.</p>
+<p>If the app is made available to children or users of unknown age, the game and its advertising configuration must comply with applicable laws and Google Play Families requirements before ads are served to those users. These requirements may include restrictions on identifiers, personalized advertising, ad content and eligible SDKs.</p>
 <p>References: <a href="https://support.google.com/googleplay/android-developer/answer/9893335" target="_blank" rel="noopener noreferrer">Google Play Families Policy</a> · <a href="https://support.google.com/googleplay/android-developer/answer/9900633" target="_blank" rel="noopener noreferrer">Families Self-Certified Ads SDK Program</a>.</p>
 </section>
-
 <section id="rights">
 <h2>8. Your Privacy Rights</h2>
 <p>Depending on your location and applicable law, you may have rights to request access, correction, deletion, restriction or objection regarding personal information. Contact Tonaroz Team using the address below. Requests concerning information held by Google or another provider may also need to be submitted through that provider's privacy tools.</p>
 <p>Google privacy controls: <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a> · <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener noreferrer">Google Account data and privacy</a>.</p>
 </section>
-
 <section id="changes">
 <h2>9. Changes and Contact</h2>
 <p>This policy may change when the game, software components, advertising configuration or legal requirements change. The latest version will be published at this address with a revised update date.</p>
 <p><strong>Tonaroz Team</strong><br>Privacy and support: <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a><br>Project: <a href="https://github.com/tonarozteam/DROPLINE" target="_blank" rel="noopener noreferrer">github.com/tonarozteam/DROPLINE</a></p>
 </section>
+</div>
 
+<div id="arabic" class="arabic" lang="ar" dir="rtl">
+<section id="ar-who-we-are">
+<h2>1. من نحن</h2>
+<p>DROPLINE هي لعبة ألغاز للهواتف المحمولة تعتمد على توصيل الأنابيب، وتنشرها Tonaroz Team. توضح هذه السياسة كيفية التعامل مع المعلومات عند استخدام اللعبة والخدمات المرتبطة بها.</p>
+<p><strong>المطوّر:</strong> Tonaroz Team<br><strong>الخصوصية والدعم:</strong> <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a></p>
+</section>
+<section id="ar-game-data">
+<h2>2. بيانات اللعبة والجهاز</h2>
+<p>تتضمن اللعبة المراحل والألغاز اليومية وتقدم اللاعب والعملات والتلميحات والإعدادات وعناصر التخصيص. قد تُخزّن قيم اللعب والتفضيلات محلياً على جهازك حتى تتمكن اللعبة من العمل وحفظ تقدمك.</p>
+<p>عند اتصال اللعبة بخدمات جهات خارجية، قد تتلقى تلك الخدمات معلومات تقنية لازمة لتقديم خدماتها وتأمينها وتحسينها. وتعتمد المعلومات الدقيقة على الخدمة وإصدار SDK وإعدادات الجهاز والتهيئة المستخدمة.</p>
+</section>
+<section id="ar-advertising">
+<h2>3. الإعلانات وGoogle AdMob</h2>
+<p>يدمج تطبيق DROPLINE على Android حزمة Google Mobile Ads SDK (AdMob). يتضمن التنفيذ الحالي إعلانات مكافأة اختيارية تمنح عملات أو تلميحات داخل اللعبة بعد تحقق حدث إكمال الإعلان المطلوب، وإعلانات بينية عند بعض الانتقالات بين المراحل. ولا يتضمن التنفيذ الحالي إعلانات البانر أو إعلانات فتح التطبيق.</p>
+<p>عند طلب إعلان أو عرضه، قد تعالج Google وشركاؤها الإعلانيون معلومات مثل عنوان IP ومعرّفات الإعلانات أو الجهاز (عند توفرها والسماح باستخدامها) وتفاعلات التطبيق والإعلانات وبيانات التشخيص والمعلومات المستخدمة للأمان ومنع الاحتيال والقياس والإعلانات. وتعتمد البيانات التي تُجمع في كل جلسة على سلوك حزمة Google وإعدادات جهازك وحالة الموافقة والمتطلبات الإقليمية وتهيئة الإصدار المنشور.</p>
+<p>مصادر Google: <a href="https://developers.google.com/admob/unity/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">إفصاح بيانات Google Mobile Ads SDK for Unity</a> · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">سياسة خصوصية Google</a>.</p>
+</section>
+<section id="ar-consent">
+<h2>4. الموافقة وخيارات الخصوصية</h2>
+<p>تدمج DROPLINE منصة Google User Messaging Platform (UMP) لدعم رسائل الخصوصية والموافقة. وفقاً لموقعك والمتطلبات المعمول بها، قد تعرض UMP رسالة موافقة قبل السماح بطلب الإعلانات. وتتحقق اللعبة من حالة الموافقة قبل طلب الإعلانات.</p>
+<p>يمكنك فتح <strong>خيارات الخصوصية</strong> من إعدادات اللعبة لمراجعة الخيارات المتاحة لمنطقتك أو تغييرها. قد لا تتطلب بعض المناطق أو حالات الموافقة عرض نموذج. وقد يؤثر تغيير اختيارك في إمكانية طلب الإعلانات.</p>
+<p>للمزيد: <a href="https://developers.google.com/admob/unity/privacy" target="_blank" rel="noopener noreferrer">توثيق Google UMP for Unity</a>.</p>
+</section>
+<section id="ar-storage">
+<h2>5. التخزين والاحتفاظ بالبيانات وحذفها</h2>
+<p>يبقى تقدم اللعب والإعدادات المخزّنة محلياً على جهازك عادةً إلى أن تمسح بيانات التطبيق أو تعيد ضبط اللعبة أو تحذفها، وفقاً لنظام Android وطريقة تنفيذ التطبيق. ولا يعني حذف اللعبة بالضرورة حذف المعلومات التي سبق أن عالجتها Google أو أي جهة خارجية أخرى.</p>
+<p>تحدد Google والجهات الأخرى مدة الاحتفاظ بالمعلومات التي تعالجها وفق سياساتها وإعدادات خدماتها. لطلب متعلق بالخصوصية من Tonaroz Team، أرسل رسالة إلى <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a> بعنوان “DROPLINE Privacy Request”. لا ترسل كلمات المرور أو بيانات البطاقات البنكية.</p>
+</section>
+<section id="ar-security">
+<h2>6. أمن البيانات</h2>
+<p>تسعى Tonaroz Team إلى استخدام تدابير حماية معقولة تتناسب مع المعلومات والخدمات التي تشغّلها. وينبغي حماية المعلومات المنقولة عبر الشبكات باستخدام وسائل أمان مناسبة. ولا توجد وسيلة تخزين أو نقل آمنة بالكامل.</p>
+</section>
+<section id="ar-children">
+<h2>7. خصوصية الأطفال والفئات العمرية</h2>
+<p>تُحدّد الفئات العمرية المستهدفة للعبة DROPLINE وفق بيانات الجمهور والمحتوى المنشورة للتطبيق في Google Play. ولا تمنح هذه السياسة اللعبة تصنيفاً عمرياً مستقلاً، ولا تقرر بمفردها أن اللعبة موجّهة للأطفال.</p>
+<p>إذا أُتيحت اللعبة للأطفال أو لمستخدمين لا يُعرف عمرهم، فيجب أن تلتزم اللعبة وإعدادات الإعلانات بالقوانين المعمول بها ومتطلبات Google Play Families قبل عرض الإعلانات لهؤلاء المستخدمين. وقد تشمل هذه المتطلبات قيوداً على المعرّفات والإعلانات المخصصة ومحتوى الإعلان وحزم SDK المؤهلة.</p>
+<p>المراجع: <a href="https://support.google.com/googleplay/android-developer/answer/9893335" target="_blank" rel="noopener noreferrer">سياسة Google Play Families</a> · <a href="https://support.google.com/googleplay/android-developer/answer/9900633" target="_blank" rel="noopener noreferrer">برنامج SDKs الإعلانية المعتمدة للعائلات</a>.</p>
+</section>
+<section id="ar-rights">
+<h2>8. حقوقك المتعلقة بالخصوصية</h2>
+<p>وفقاً لموقعك والقوانين المعمول بها، قد يحق لك طلب الوصول إلى المعلومات الشخصية أو تصحيحها أو حذفها أو تقييد معالجتها أو الاعتراض عليها. تواصل مع Tonaroz Team عبر العنوان أدناه. وقد تتطلب الطلبات المتعلقة بالمعلومات التي تحتفظ بها Google أو جهة أخرى استخدام أدوات الخصوصية الخاصة بتلك الجهة أيضاً.</p>
+<p>أدوات خصوصية Google: <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">مركز إعلانات Google</a> · <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener noreferrer">بيانات وخصوصية حساب Google</a>.</p>
+</section>
+<section id="ar-changes">
+<h2>9. التغييرات والتواصل</h2>
+<p>قد تتغير هذه السياسة عند تغيير اللعبة أو مكونات البرامج أو إعدادات الإعلانات أو المتطلبات القانونية. ستُنشر أحدث نسخة على هذا العنوان مع تحديث تاريخ المراجعة.</p>
+<p><strong>Tonaroz Team</strong><br>الخصوصية والدعم: <a href="mailto:Tunarozteam@gmail.com">Tunarozteam@gmail.com</a><br>المشروع: <a href="https://github.com/tonarozteam/DROPLINE" target="_blank" rel="noopener noreferrer">github.com/tonarozteam/DROPLINE</a></p>
+</section>
+</div>
 <footer>© 2026 Tonaroz Team · DROPLINE</footer>
 </main>
 </body>

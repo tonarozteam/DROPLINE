@@ -31,7 +31,7 @@ The repository currently contains project documentation and the public privacy p
 
 ## Privacy and advertising
 
-The game is intended to use Google AdMob for advertising and Google User Messaging Platform (UMP) for consent management. The exact data practices depend on the SDK versions, configuration, enabled ad features, and applicable regional consent requirements. See the [Privacy Policy](https://tonarozteam.github.io/DROPLINE/docs/privacy/).
+The DROPLINE Android application integrates Google AdMob for rewarded and interstitial advertising, and Google User Messaging Platform (UMP) for consent management. The data processed in a session depends on SDK behavior, app configuration, device settings, consent status, and regional requirements. See the [Privacy Policy](https://tonarozteam.github.io/DROPLINE/docs/privacy/) and [Privacy Choices](https://tonarozteam.github.io/DROPLINE/privacy-choices/).
 
 ## Contact
 
